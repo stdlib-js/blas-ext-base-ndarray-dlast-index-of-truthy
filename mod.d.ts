@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,28 +16,35 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { float64ndarray } from '@stdlib/types/ndarray';
 
 /**
-* Return the index of the last truthy element in a one-dimensional double-precision floating-point ndarray.
+* Returns the index of the last truthy element in a one-dimensional double-precision floating-point ndarray.
 *
-* @module @stdlib/blas-ext-base-ndarray-dlast-index-of-truthy
+* ## Notes
+*
+* -   The function expects the following ndarrays:
+*
+*     -   a one-dimensional input ndarray.
+*
+* @param arrays - array-like object containing ndarrays
+* @returns index
 *
 * @example
 * var Float64Vector = require( '@stdlib/ndarray-vector-float64' );
-* var dlastIndexOfTruthy = require( '@stdlib/blas-ext-base-ndarray-dlast-index-of-truthy' );
 *
 * var x = new Float64Vector( [ 0.0, 1.0, 0.0, 2.0 ] );
 *
 * var v = dlastIndexOfTruthy( [ x ] );
 * // returns 3
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function dlastIndexOfTruthy( arrays: [ float64ndarray ] ): number;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = dlastIndexOfTruthy;
